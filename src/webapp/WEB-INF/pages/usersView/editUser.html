@@ -1,0 +1,44 @@
+<!DOCTYPE html>                                     <!-- На этой странице представлена форма для редактирования данных существующего пользователя -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit User</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<h1>Update User</h1>
+
+<form action="#" th:action="@{/users/update}" method="post">
+    <input type="hidden" name="id" th:value="${user.id}"/>
+    <div>
+        <label>First Name:</label>
+        <input type="text" name="firstName" th:value="${user.firstName}" required/>
+    </div>
+
+    <br>
+
+    <div>
+        <label>Last Name:</label>
+        <input type="text" name="lastName" th:value="${user.lastName}" required/>
+    </div>
+
+    <br>
+
+    <div>
+        <label>Email:</label>
+        <input type="email" name="email" th:value="${user.email}" required/>
+    </div>
+
+    <br>
+
+    <div>
+        <input type="submit" value="Update User"/>
+    </div>
+
+    <br>
+    <br>
+
+</form>
+
+<a th:href="@{/users}">Back to User List</a>
+</body>
+</html>

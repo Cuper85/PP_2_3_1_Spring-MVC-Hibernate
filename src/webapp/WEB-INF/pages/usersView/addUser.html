@@ -1,0 +1,42 @@
+<!DOCTYPE html>                                   <!-- На этой странице представлена форма для добавления нового пользователя -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add User</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<h1>Add New User</h1>
+
+<form action="#" th:action="@{/users/add}" method="post">
+    <div>
+        <label>First Name:</label>
+        <input type="text" name="firstName" required/>
+    </div>
+
+    <br>
+
+    <div>
+        <label>Last Name:</label>
+        <input type="text" name="lastName" required/>
+    </div>
+
+    <br>
+
+    <div>
+        <label>Email:</label>
+        <input type="email" name="email" required/>
+    </div>
+
+    <br>
+
+    <div>
+        <input type="submit" value="Add User"/>
+    </div>
+
+    <br>
+
+</form>
+
+<a th:href="@{/users}">Back to User List</a>
+</body>
+</html>
